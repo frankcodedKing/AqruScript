@@ -1,0 +1,130 @@
+/*!
+ * Theme Name: Genox -  Multipurpose HTML Template
+ * Author: Softnio
+ * Author URI: http://themeforest.net/user/softnio
+ * Version: 1.4.1
+ * Updated: 11.27.2019
+**//*! WRITE YOUR OWN STYLE HERE **/
+body{
+    background-color: #f2f2f2;
+}
+.has-fixed .header-main, .bg-primary{
+    background: #0047ab!important;
+}
+.menu-item a.active, .menu-item a:hover {
+    color: #0047ab;
+}
+.menu-item a {
+    color: #fff;
+}
+.menu-item a:hover {
+    color: #fff;
+}
+.menu-drop .menu-item a {
+    color: #0047ab!important;
+}
+.menu-item>a.active {
+    color: #fff;
+}
+.btn {
+    /* deals with the color of the buttons */
+    background: #fff;
+    color: #0047ab;
+    border: 1px solid #0047ab;
+}
+.btn:hover{
+    background: #fff;
+    color: #0047ab;
+}
+.menu-btns a.btn {
+    color: #0047ab!important;
+}
+.line{
+    background: #fff!important;
+}
+.dash::before, .dash::after {
+    background: #1e90ff;
+}
+.btn-scroll {
+    background: #0047ab!important;
+}
+.bg-light{
+    background-color: #f2f2f2!important;
+}
+.bg-dark-alt{
+    background: #002a66!important;
+}
+.card-title{
+    color: #0047ab;
+}
+.card-text + a,
+.themebtn {
+    padding: 10px;
+    background-color: #0047ab;
+    color: #fff;
+    border-radius: 5px;
+}
+.card-text + a:hover,
+.themebtn:hover {
+    color: #fff;
+}
+.btn-outline:hover{
+    background-color: #0047ab!important;
+    color: #fff;
+    border: 1px solid #0047ab;
+}
+.icon {
+    color: #fff;
+}
+.tes-author .author-name {
+    color: #0047ab;
+}
+.slick-dots li.slick-active {
+    background: #0047ab;
+}
+.bg-primary .btn {
+    background: #fff;
+    color: #0047ab;
+}
+.mywhite {
+    color: #fff!important;
+}
+.btn-career:hover{
+    background: #0047ab;
+}
+.btn-career em {
+    color: #0047ab;
+}
+form .input {
+    color: #0047ab;
+    background: #fff!important;
+    border: 1px solid #0047ab;
+}
+.col-md-4{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+    .menu-item a {
+        color: #0047ab;
+    }
+    .menu-item a:hover,
+    .menu-item a:active {
+        color: #0047ab;
+    }
+    .menu-item>a.active {
+        color: #0047ab;
+    }
+}
