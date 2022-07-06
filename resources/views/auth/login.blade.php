@@ -1,13 +1,19 @@
-@extends("layouts.layout")
+@extends("layouts.aqrulayout")
+{{-- @extends("layouts.layout") --}}
 @section('body')
-@include('nav')
-
+{{-- @include('nav') --}}
+{{-- 
       <div class="container-scroller">
             <div class="container-fluid page-body-wrapper full-page-wrapper">
                 <div class="content-wrapper auth p-5 theme-two">
                     <div class="row d-flex align-items-stretch">
                         <div class="col-12 col-md-12 h-100 card">
                             <div class="auto-form-wrapper d-flex align-items-center justify-content-center flex-column">
+ --}}
+
+
+          <div class="card border-0 shadow rounded-3 my-5 mx-auto" style="width: 60%;">
+
                                 <div class="nav-get-started">
 
 
@@ -60,14 +66,14 @@
                   </div>
                   <p class='text-danger'><a href='{{route('password.request')}}'>Forgot Password?</a></p>
                   <div class="form-group">
-                      <button type="submit" name="login" class="btn btn-primary submit-btn">SIGN IN <i class="fa fa-sign-in"></i></button>
+                      <button type="submit" name="login" class="btn btn-primary submit-btn" style="background-color: blueviolet; border-color: #fff;">SIGN IN <i class="fa fa-sign-in"></i></button>
                   </div>
                    </div>
-                    </div>
+                   {{--  </div>
                      </div>
                       </div>
                        </div>
-                        </div>
+                        </div> --}}
                      
 
 @endsection

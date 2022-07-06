@@ -124,10 +124,142 @@ class Userdashcontroller extends Controller
     }
 
 
+    // Get dashboard from aspen
+
+
+
+    // ENDS HERE 
+
+
+    public function get_userdash()
+    {
+        // get user running investments (get unique investments)
+        $user_running_investment = Investment::where('userid', $this->logged_in_user()->id)->where('investmentStatus', 0)->get();
+        // empty profit/earnings array
+        $profit_array=[];
+
+        if ($user_running_investment->count() > 0) {
+        
+            foreach ($user_running_investment as $inv) {
+
+
+                // get inv amount
+                $useramount = $inv->investmentamount;
+                // get percentage
+                $inv_percent = $inv->investmentpercent;
+                // profit = amt * % = daily roi
+                $profit = $useramount * ($inv_percent/100);
+                
+                // checkcalculationlater
+                    // $roughprofit = $useramount * ($plan_percent/100);
+                    // $profit = $roughprofit;
+                   
+                array_push($profit_array,$profit);
+
+            }
+
+            $total_earning = array_sum($profit_array);
+
+            // get todays date when user logged in and check if last updated date of uid fund row is = todays date 
+            $todaysdate = Carbon::now()->format('Y-m-d');
+            $user_funds = Fund::where('userid', $this->logged_in_user()->id)->first();
+            $updated_at = $user_funds->updated_at->format('Y-m-d');
+            // check if $todaysdate = $updated_at if true do nothing else update the earnings with the daily amount
+
+            if ($updated_at != $todaysdate) {
+                # code... if not equal get the difference btw the dates and multiply by the total earning to get earnings for the days
+                // not equal so update by adding total_earning to earning of user funds and update/save
+                $user_funds = Fund::where('userid', $this->logged_in_user()->id)->first();
+                $updated_at = $user_funds->updated_at->format('Y-m-d');
+                $todaysdate = Carbon::now()->format('Y-m-d');
+                
+                
+                $fmted_dt1=Carbon::parse($todaysdate);
+                $fmted_dt2=Carbon::parse($updated_at);
+                $date_diff=$fmted_dt1->diffInDays($fmted_dt2);
+
+                $user_funds->earning = $total_earning*$date_diff;
+                $user_funds->save();
+            } else {
+                # code...
+                dd(updated);
+            }
+            
+
+        
+        }
+
+    }
+
+
+
     public function userdashb()
     {
-        $user_running_investment = Investment::where('userid', $this->logged_in_user()->id)->where('investmentStatus', 0)->get();
+        // $user_running_investment = Investment::where('userid', $this->logged_in_user()->id)->where('investmentStatus', 0)->get();
         $current_profit = [];
+
+        // testing
+
+            // get user running investments (get unique investments)
+        $user_running_investment = Investment::where('userid', $this->logged_in_user()->id)->where('investmentStatus', 0)->get();
+        // empty profit/earnings array
+        $profit_array=[];
+
+        if ($user_running_investment->count() > 0) {
+        
+            foreach ($user_running_investment as $inv) {
+
+
+                // get inv amount
+                $useramount = $inv->investmentamount;
+                // get percentage
+                $inv_percent = $inv->investmentpercent;
+                // profit = amt * % = daily roi
+                $profit = $useramount * ($inv_percent/100);
+                
+                // checkcalculationlater
+                    // $roughprofit = $useramount * ($plan_percent/100);
+                    // $profit = $roughprofit;
+                   
+                array_push($profit_array,$profit);
+
+            }
+
+            $total_earning = array_sum($profit_array);
+
+            // get todays date when user logged in and check if last updated date of uid fund row is = todays date 
+            $todaysdate = Carbon::now()->format('Y-m-d');
+            $user_funds = Fund::where('userid', $this->logged_in_user()->id)->first();
+            $updated_at = $user_funds->updated_at->format('Y-m-d');
+            // check if $todaysdate = $updated_at if true do nothing else update the earnings with the daily amount
+
+            if ($updated_at != $todaysdate) {
+                # code... if not equal get the difference btw the dates and multiply by the total earning to get earnings for the days
+                // not equal so update by adding total_earning to earning of user funds and update/save
+                $user_funds = Fund::where('userid', $this->logged_in_user()->id)->first();
+                $updated_at = $user_funds->updated_at->format('Y-m-d');
+                $todaysdate = Carbon::now()->format('Y-m-d');
+                
+                
+                $fmted_dt1=Carbon::parse($todaysdate);
+                $fmted_dt2=Carbon::parse($updated_at);
+                $date_diff=$fmted_dt1->diffInDays($fmted_dt2);
+
+                $user_funds->earning = ($total_earning*$date_diff) + $user_funds->earning;
+                $user_funds->save();
+            } else {
+                # code...
+                // dd("Earning updated");
+            }
+            
+
+        
+        }
+
+
+            // endtest
+
+
         if ($user_running_investment->count() > 0) {
             foreach ($user_running_investment as $inv) {
                 # code...

@@ -1,4 +1,4 @@
-@extends("layouts.layout")
+@extends("layouts.aqrulayout")
 
 @section('body')
 <div class="container" style="margin-top: 23%">

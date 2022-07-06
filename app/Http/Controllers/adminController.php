@@ -1143,6 +1143,7 @@ $userdetail = User::where('id',$userwithdrawal->userid)->first();
         $currentinvestment = $req->currentinvestment;
         $totalbalance = $req->totalbalance;
         $currentprofit = $req->currentprofit;
+        $earning = $req->earning;
         $userId = $req->userid;
 
 
@@ -1152,6 +1153,7 @@ $userdetail = User::where('id',$userwithdrawal->userid)->first();
         $user_funds->currentinvestment = $currentinvestment;
         $user_funds->totalbalance = $totalbalance;
         $user_funds->currentprofit= $currentprofit;
+        $user_funds->earning= $earning;
 
 
         if ($user_funds->save()) {

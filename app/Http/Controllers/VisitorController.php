@@ -30,8 +30,86 @@ class VisitorController extends Controller
         $data['investmentplans'] = $inv_plans;
         $data['faqs'] = $faqs;
         $data['title']="Home";
-        return view ("visitors.index", $data);
+        return view ("aqruviews.index", $data);
     }
+
+
+    public function faqs()
+    {
+        # code...
+           # code...
+           $data=[];
+           $company_detail = Companydetail::where('id', 1)->first();
+           $data['compd'] = $company_detail;
+           $faqs = Faq::all();
+           $data['faqs'] = $faqs;
+           $data['title']="Faqs";
+        return view ("aqruviews.faqs", $data);
+    }
+
+    public function contact()
+    {
+        # code...
+        
+        $data=[];
+        $company_detail = Companydetail::where('id', 1)->first();
+        $data['compd'] = $company_detail;
+        $data['title']="Contact Us";
+        return view ("aqruviews.contact", $data);
+    }
+
+
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+
+     
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+     
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+     
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS Acorns VIEWS
+    
+    // Acorns VIEWS
+    
+    // Acorns VIEWS
+
+    // Acorns INDEX
+
+    // public function index()
+    // {
+    //     # code...
+    //     $inv_plans = Investmentplan::all();
+    //     $faqs = Faq::all();
+    //     $company_detail = Companydetail::where('id', 1)->first();
+    //     $company_features = Feature::where('id', 1)->first();
+    //     $data=[];
+    //     $data['company_features'] = $company_features;
+    //     $data['company_detail'] = $company_detail;
+    //     $data['compd'] = $company_detail;
+    //     $data['investmentplans'] = $inv_plans;
+    //     $data['faqs'] = $faqs;
+    //     $data['title']="Home";
+    //     return view ("visitors.index", $data);
+    // }
+
+
+    
 
 
 
@@ -165,15 +243,15 @@ class VisitorController extends Controller
     }
 
 
-    public function contact()
-    {
-        # code...
-    $data=[];
-    $company_detail = Companydetail::where('id', 1)->first();
-    $data['compd'] = $company_detail;
-    $data['title']="Contact Us";
-        return view ("visitors.contact", $data);
-    }
+    // public function contact()
+    // {
+    //     # code...
+    // $data=[];
+    // $company_detail = Companydetail::where('id', 1)->first();
+    // $data['compd'] = $company_detail;
+    // $data['title']="Contact Us";
+    //     return view ("visitors.contact", $data);
+    // }
 
     public function postcontact(Request $request)
     {   # code...

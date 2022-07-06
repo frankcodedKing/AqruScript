@@ -26,6 +26,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes(['verify' => true]);
 
 
+
+
+// Aqru routes
+
+
+
 //ADMIN
 Route::get('/codefiadmin', [App\Http\Controllers\adminController::class, 'adminindex'])->name('adminindex');
 Route::get('/pages', [App\Http\Controllers\adminController::class, 'pages'])->name('pages');
@@ -266,9 +272,44 @@ Route::get ('/cryptoplan', [App\Http\Controllers\Userdashcontroller::class, 'cry
 
 
 
-//visitors routes
+// Aqru routes
+
+
+// Aqru routes
+
+
+// Aqru routes
+
+
+// Aqru routes
+
+
+// Aqru routes
+
+
+// Aqru routes
+
+// Aqru routes
+
+
+// Aqru routes
 
 Route::get('/', [App\Http\Controllers\VisitorController::class, 'index'])->name('index');
+
+Route::get('/faqs', [App\Http\Controllers\VisitorController::class, 'faqs'])->name('faqs');
+
+
+
+
+//ACORNS visitors routes
+
+//ACORNS visitors routes
+
+//ACORNS visitors routes
+
+//ACORNS visitors routes
+
+// Route::get('/', [App\Http\Controllers\VisitorController::class, 'index'])->name('index');
 Route::get('/about', [App\Http\Controllers\VisitorController::class, 'about'])->name('about');
 Route::get('/invest', [App\Http\Controllers\VisitorController::class, 'invest'])->name('invest');
 Route::get('/blog', [App\Http\Controllers\VisitorController::class, 'blog'])->name('blog');

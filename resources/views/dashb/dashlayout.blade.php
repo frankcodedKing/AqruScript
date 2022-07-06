@@ -217,8 +217,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{route('userdashb_investment_plans')}}">Investment Plans</a></li>
-            <li><a href="{{route('userdashb_current_investment')}}">MY Current Investment</a></li>
-            <li><a href="{{route('userdashb_expected_profit')}}">Expected Profit</a></li>
+            <li><a href="{{route('userdashb_current_investment')}}">My Investments</a></li>
+            {{-- <li><a href="{{route('userdashb_expected_profit')}}">Expected Profit</a></li> --}}
             <li><a href="{{route('userdashb_investment_history')}}">Investment History</a></li>
           </ul>
         </li>
@@ -283,19 +283,19 @@
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
+          {{-- <ul class="treeview-menu">
             <li><a href="{{route('userdashb_charts')}}">Market charts</a></li>
 
-          </ul>
+          </ul> --}}
         </li>
         <li class="treeview">
-          <a href="#">
+          {{-- <a href="#">
             <i class="ion ion-person"></i>
             <span>My Profile</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
-          </a>
+          </a> --}}
           <ul class="treeview-menu">
             <li><a href="{{route('userdashb_profile')}}">view profile</a></li>
             <li><a href="{{route('userdashb_wallet_address')}}">my wallet address</a></li>
@@ -305,7 +305,7 @@
         </li>
 
         <li class="treeview">
-          <a href="#">
+          {{-- <a href="#">
             <i class="fa fa-laptop"></i>
             <span>Top Users</span>
             <span class="pull-right-container">
@@ -315,7 +315,7 @@
           <ul class="treeview-menu">
             <li><a href="{{route('userdashb_top_earners')}}">top Earners</a></li>
 
-          </ul>
+          </ul> --}}
 
 
 		<li class="header nav-small-cap">More</li>
@@ -341,7 +341,7 @@
           <ul class="treeview-menu">
 
 			<li><a href="{{route('userdashb_password_reset')}}">reset pasword</a></li>
-            <li class="treeview">
+            {{-- <li class="treeview">
               <a href="#">Authentication
                 <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -351,7 +351,7 @@
               <!--  <li><a href="../samplepage/login.html">google authentication</a></li>-->
 
               <!--</ul>-->
-            </li>
+            </li> --}}
 
           </ul>
         </li>

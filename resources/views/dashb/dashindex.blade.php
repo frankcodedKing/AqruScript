@@ -108,7 +108,9 @@
 					  </div>
 					  <div class=" align-items-center mt-5">
 						<div class="fun">
-						  <p class="font-weight-600"><span class="text-success">${{$funds? $funds->currentprofit : 0.01}}</span></p>
+						  {{-- <p class="font-weight-600"><span class="text-success">${{$funds? $funds->currentprofit : 0.01}}</span></p> --}}
+						  <p class="font-weight-600"><span class="text-success">${{$funds? $funds->earning : 0.01}}</span></p>
+
 						   <!--<p class="font-weight-600"><span class="text-success">$17</span></p>-->
 						</div>
 					  </div>

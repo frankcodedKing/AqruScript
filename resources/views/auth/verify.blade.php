@@ -1,4 +1,5 @@
-@extends("layouts.layout")
+@extends("layouts.aqrulayout")
+{{-- @extends("layouts.layout") --}}
 
 @section('body')
 <div class="container" style="margin-top: 5%">

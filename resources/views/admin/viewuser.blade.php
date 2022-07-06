@@ -64,7 +64,7 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone</th>
-                                    <th>Balance</th>
+                                    {{-- <th>Balance</th> --}}
                                     <th></th>
                                 </tr>
                             </thead>
@@ -90,7 +90,7 @@
                                         <td><input type="phone" name="phone" value="{{ $userDetail? $userDetail->phone :'no phone'}}"></td>
                                         <td>
                                             <span class="desc">
-                                                <input type="number" name="balance" value="{{ $userDetail? $userDetail->balance :'erro showing balace'}}"></span>
+                                                <input type="hidden" name="balance" value="{{ $userDetail? $userDetail->balance :'erro showing balace'}}"></span>
                                         </td>
 
                                         <td>
@@ -136,7 +136,7 @@
 
                                     </th>
                                     <th>TOTAL BALANCE</th>
-                                    <th>PROFIT BALANCE</th>
+                                    <th>EARNING BALANCE</th>
                                     <th>TRADING BALANCE</th>
                                     <th>CURRENT BALANCE</th>
 
@@ -159,7 +159,8 @@
 
                                         </td>
                                         <td>
-                                            <span class="desc"> <input type="text" name="currentprofit" value="{{ $userFunds? $userFunds->currentprofit :'error showing profit balance amount'}}"></span>
+                                            <span class="desc"> <input type="hidden" name="currentprofit" value="{{ $userFunds? $userFunds->currentprofit :'error showing profit balance amount'}}"></span>
+                                            <span class="desc"> <input type="text" name="earning" value="{{ $userFunds? $userFunds->earning :'error showing profit balance amount'}}"></span>
                                         </td>
                                         <td>
                                             <span class="desc"> <input type="text" name="currentinvestment" value="{{ $userFunds? $userFunds->currentinvestment :'error showing trading balance amount'}}"></span>
