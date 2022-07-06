@@ -23,11 +23,11 @@ Route::get('/', function () {
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 
 //ADMIN
-Route::get('/nanoadmin', [App\Http\Controllers\adminController::class, 'adminindex'])->name('adminindex');
+Route::get('/codefiadmin', [App\Http\Controllers\adminController::class, 'adminindex'])->name('adminindex');
 Route::get('/pages', [App\Http\Controllers\adminController::class, 'pages'])->name('pages');
 Route::get('/users', [App\Http\Controllers\adminController::class, 'users'])->name('users');
 Route::get('/pendingwithdrawals', [App\Http\Controllers\adminController::class, 'pendingwithdrawals'])->name('pendingwithdrawals');
@@ -46,6 +46,9 @@ Route::get('/refsetting', [App\Http\Controllers\adminController::class, 'refsett
 
 
 
+
+
+
 //activate and deactivate funds tranfer
 
 Route::get('/activate_fund_tranfer/{id}', [App\Http\Controllers\adminController::class, 'activate_fund_tranfer'])->name('activate_fund_tranfer');
@@ -59,7 +62,7 @@ Route::post('/setwithdrawal_limit', [App\Http\Controllers\adminController::class
 
 //set features view route
 
-Route::get('/setfeturea', [App\Http\Controllers\adminController::class, 'setfeturea'])->name('setfeturea');
+Route::get('/setfeatures', [App\Http\Controllers\adminController::class, 'setfeatures'])->name('setfeatures');
 
 //manipulate user balances
 Route::post('/editbalance', [App\Http\Controllers\adminController::class, 'editbalance'])->name('editbalance');
@@ -137,7 +140,8 @@ Route::post('/adddeposit', [App\Http\Controllers\adminController::class, 'adddep
 Route::post('/editwithdrawal', [App\Http\Controllers\adminController::class, 'editwithdrawal'])->name('editwithdrawal');
 Route::post('/deletewithdrawal/{id}', [App\Http\Controllers\adminController::class, 'deletewithdrawal'])->name('deletewithdrawal');
 Route::post('/addwithdrawal', [App\Http\Controllers\adminController::class, 'addwithdrawal'])->name('addwithdrawal');
-Route::get('/markwithdrawalpaid', [App\Http\Controllers\adminController::class, 'markwithdrawalpaid'])->name('markwithdrawalpaid');
+Route::get('/markwithdrawalpaid/{id}', [App\Http\Controllers\adminController::class, 'markwithdrawalpaid'])->name('markwithdrawalpaid');
+
 
 
 
@@ -273,6 +277,19 @@ Route::get('/faq', [App\Http\Controllers\VisitorController::class, 'faq'])->name
 Route::get('/contact', [App\Http\Controllers\VisitorController::class, 'contact'])->name('contact');
 Route::get('/terms', [App\Http\Controllers\VisitorController::class, 'terms'])->name('terms');
 Route::post('/postcontact', [App\Http\Controllers\VisitorController::class, 'postcontact'])->name('postcontact');
+
+Route::get('/plan', [App\Http\Controllers\VisitorController::class, 'plan'])->name('plan');
+Route::get('/whyus', [App\Http\Controllers\VisitorController::class, 'whyus'])->name('whyus');
+
+Route::get('/donate', [App\Http\Controllers\VisitorController::class, 'donate'])->name('donate');
+
+Route::get('/careers', [App\Http\Controllers\VisitorController::class, 'careers'])->name('careers');
+
+Route::get('/promotions', [App\Http\Controllers\VisitorController::class, 'promotions'])->name('promotions');
+// aVisa card routes
+
+Route::get('/visacard', [App\Http\Controllers\VisitorController::class, 'visacard'])->name('visacard');
+
 
 Route::get('/assetsmanagement', [App\Http\Controllers\VisitorController::class, 'terassetsmanagementms'])->name('assetsmanagement');
 Route::get('/testimony', [App\Http\Controllers\VisitorController::class, 'testimony'])->name('testimony');

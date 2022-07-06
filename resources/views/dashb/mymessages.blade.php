@@ -18,7 +18,7 @@
   <section class="content">
 
 
-      <h5 class="mb-15">Messages from admin and promotions are included here</h5>
+      <h5 class="mb-15">Messages and promotions are included here</h5>
 
       <div class="row">
           @if ($messages->count()>0)

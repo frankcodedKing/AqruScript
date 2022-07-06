@@ -63,14 +63,14 @@
                                 <li>Max Deposit <b>${{$plan->maximum }}</b></li>
 
 
-                                <li>Monthly Profit <b>{{$plan->percentage }}%</b></li>
+                                <li>Monthly Profit <b>{{$plan->percentage  * $plan->noofrepeat}}%</b></li>
 
                                 <li>Duration <b>{{$plan->duration }} days</b></li>
                             </ul>
                         </div>
                         <div class="pricing-cta pricing-cta-s2">
                             <div class="price">
-                                <h2>${{$loop->index + 1}}000 +</h2>
+                                <h2>${{$loop->index + 1 * 1000 + $plan->minimum}} +</h2>
                             </div>
                             <div class="cta-area">
                                 <a href="user/signup.html" style='padding: 10px 20px; margin-top: -12px;'

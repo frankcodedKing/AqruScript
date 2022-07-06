@@ -158,7 +158,7 @@
                                     <a href="{{ route("refsetting") }}">referal percent setting</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route("post_features_setting") }}">features setting</a>
+                                    <a href="{{ route('setfeatures') }}">features setting</a>
                                 </li>
 
                             </ul>
@@ -291,7 +291,7 @@
                                     <a href="{{ route("refsetting") }}">referal percent setting</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route("post_features_setting") }}">features setting</a>
+                                    <a href="{{ route("setfeatures") }}">features setting</a>
                                 </li>
                             </ul>
                         </li>

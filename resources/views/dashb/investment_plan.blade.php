@@ -35,7 +35,7 @@
                         <a href="#"><i class="cc LSK mr-5" title="OMG"></i></a>
                         </div>
                         <div>
-                        <a href="{{route('forexplan')}}"><h3 class="no-margin text-bold">View Forex Plan</h3></a>
+                        <a href="{{route('forexplan')}}"><h3 class="no-margin text-bold">View Forex Plans</h3></a>
 
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                           <a href="#"><i class="cc LSK mr-5" title="OMG"></i></a>
                           </div>
                           <div>
-                          <a href="{{route('cryptoplan')}}"><h3 class="no-margin text-bold">View Crypto Plan</h3></a>
+                          <a href="{{route('cryptoplan')}}"><h3 class="no-margin text-bold">View Crypto Plans</h3></a>
 
                           </div>
                       </div>
@@ -106,33 +106,33 @@
             <!-- /.box -->
           </div>
 
-          <div class="col-md-12 col-lg-4">
-            <div class="box box-default pull-up">
-                <img class="card-img-top img-responsive" src="dashb/images/card/realestate.jpg" alt="Card image cap">
-            <a href="{{route('realestateplan')}}">
-              <div class="box-body text-center">
+          <!--<div class="col-md-12 col-lg-4">-->
+          <!--  <div class="box box-default pull-up">-->
+          <!--      <img class="card-img-top img-responsive" src="dashb/images/card/realestate.jpg" alt="Card image cap">-->
+          <!--  <a href="{{route('realestateplan')}}">-->
+          <!--    <div class="box-body text-center">-->
 
-                  <p><div class="col-12 col-md-12">
-                    <div class="box box-body bg-hexagons-white pull-up">
-                      <div class="media align-items-center p-0">
-                        <div class="text-center">
-                          <a href="#"><i class="cc LSK mr-5" title="OMG"></i></a>
-                          </div>
-                          <div>
-                          <a href="{{route('realestateinvplan')}}"><h3 class="no-margin text-bold">View Realestate Plan</h3></a>
+          <!--        <p><div class="col-12 col-md-12">-->
+          <!--          <div class="box box-body bg-hexagons-white pull-up">-->
+          <!--            <div class="media align-items-center p-0">-->
+          <!--              <div class="text-center">-->
+          <!--                <a href="#"><i class="cc LSK mr-5" title="OMG"></i></a>-->
+          <!--                </div>-->
+          <!--                <div>-->
+          <!--                <a href="{{route('realestateinvplan')}}"><h3 class="no-margin text-bold">View Realestate Plan</h3></a>-->
 
-                          </div>
-                      </div>
+          <!--                </div>-->
+          <!--            </div>-->
 
-                    </div>
-                  </div>
+          <!--          </div>-->
+          <!--        </div>-->
 
-              </div>
-            </a>
+          <!--    </div>-->
+          <!--  </a>-->
               <!-- /.box-body -->
-            </div>
+          <!--  </div>-->
             <!-- /.box -->
-          </div>
+          <!--</div>-->
 
 
 

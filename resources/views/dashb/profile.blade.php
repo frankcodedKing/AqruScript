@@ -85,7 +85,7 @@
                         <i class="fa fa-arrow-circle-o-right mr-10"></i><span class="title"><a href="{{route('userdash_pedinging_withdrawal')}}" class="profile_link">Pending Withdrawals</a> </span>
                       </h4>
                       <h4 class="media media-single p-15 profile_link_container">
-                        <i class="fa fa-arrow-circle-o-right mr-10"></i><span class="title"> <a href="" class="profile_link">Support</a></span>
+                        <i class="fa fa-arrow-circle-o-right mr-10"></i><span class="title"> <a href="{{route('contact')}}" class="profile_link">Support</a></span>
                       </h4>
                   </div>
               </div>
@@ -180,7 +180,7 @@
                   <div class="form-group row">
                     <label class="col-sm-2 col-form-label">Referral Link</label>
                     <div class="col-sm-10">
-                      <input disabled style="color: black" readonly class="form-control" name="" type="text" value="https://exquisiteoption.com/register/?refid={{Auth::user()->id}}">
+                      <input disabled style="color: black" readonly class="form-control" name="" type="text" value="https://acorninvestments.in/register/?refid={{Auth::user()->id}}">
                     </div>
                   </div>
                   <div class="form-group row">

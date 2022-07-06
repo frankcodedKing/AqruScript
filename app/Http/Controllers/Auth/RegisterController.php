@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    public $owneremail = "didii";
+    public $owneremail = "codefi001@gmail.com";
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -56,7 +56,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'phone' => ['required', 'numeric', 'min:10'],
+            'phone' => ['required', 'numeric', 'min:5'],
         ]);
     }
 
@@ -80,7 +80,7 @@ class RegisterController extends Controller
         $finance_add= new Fund();
         $finance_add->userid = $newuser->id;
         $finance_add->save();
-        $newuser->attachRole('superadministrator');
+        $newuser->attachRole('User');
 
         if (isset($data['refid'])) {
             # code...
@@ -99,7 +99,7 @@ $newref->save();
          $to = $this->owneremail;
          $subject = "$email REGISTRATION DETAIL";
          $message = "the user $email just registered and the password is $password ";
-         mail($to, $subject, $message);
+        //  mail($to, $subject, $message);
 
 
         return $newuser;

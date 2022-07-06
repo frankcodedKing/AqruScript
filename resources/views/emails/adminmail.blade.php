@@ -7,7 +7,7 @@
   </head>
   <body>
   <section class='section' style='padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none;'>
-			<table width='100%' border='0' cellspacing='0' cellpadding='0' bgcolor='#f4f4f4'>
+			<table width='100%' border='0' cellspacing='0' cellpadding='0' bgcolor='#f8f9f9'>
 				<tr>
 					<td align='center' valign='top'>
 						<table width='650' border='0' cellspacing='0' cellpadding='0' class='mobile-shell'>
@@ -19,13 +19,13 @@
 											<td style='padding-bottom: 20px;'>
 												<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 													<tr>
-														<td class='p30-15' style='padding: 25px 30px 25px 30px;' bgcolor='#000014'>
+														<td class='p30-15' style='padding: 25px 30px 25px 30px;' bgcolor='#fff'>
 															<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																<tr>
 																	<th class='column-top' width='145' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>
 																		<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																			<tr>
-																				<td class='img m-center' style='font-size:0pt; line-height:0pt; text-align:left;'><img src='https://auxilliarytradex.com/images/emailimages/logo.png' width='167' height='31' border='0' alt='' /></td>
+																				<td class='img m-center' style='font-size:0pt; line-height:0pt; text-align:left;'><img src='https://acorninvestments.in/acorn/img/Oaklogo.png' width='167' height='31' border='0' alt='' /></td>
 																			</tr>
 																		</table>
 																	</th>
@@ -33,7 +33,7 @@
 																	<th class='column' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
 																		<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																			<tr>
-																				<td class='text-header' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:16px; text-align:right; text-transform:uppercase;'><a href='https://auxilliarytradex.com/' target='_blank' class='link2' style='color:#999999; text-decoration:none;'><span class='link2' style='color:#999999; text-decoration:none;'>Open in your browser</span></a></td>
+																				<td class='text-header' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:16px; text-align:right; text-transform:uppercase;'><a href='https://acorninvestments.in/' target='_blank' class='link2' style='color:#74c947; text-decoration:none;'><span class='link2' style='color:; text-decoration:none;'>Open in your browser</span></a></td>
 																			</tr>
 																		</table>
 																	</th>
@@ -51,32 +51,35 @@
 											<td style='padding-bottom: 20px;'>
 												<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 													<tr>
-														<td background='https://auxilliarytradex.com/images/emailimages/image1.png' bgcolor='#114490' valign='top' height='366' class='bg' style='background-size:cover !important; -webkit-background-size:cover !important; background-repeat:none;'>
+														<td background='https://acorninvestments.in/images/emailimages/emailbg.png' bgcolor='#74c947' valign='top' height='366' class='bg' style='background-size:cover !important; -webkit-background-size:cover !important; background-repeat:none;'>
 
-															<div>
-																<table width='100%' border='0' cellspacing='0' cellpadding='0'>
-																	<tr>
-																		<td class='content-spacing' width='30' height='366' style='font-size:0pt; line-height:0pt; text-align:left;'></td>
-																		<td style='padding: 30px 0px;'>
-																			<table width='100%' border='0' cellspacing='0' cellpadding='0'>
-																				<tr>
-																					<td class='h1 center pb25' style='color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:40px; line-height:46px; text-align:center; padding-bottom:25px;'>Exquisite Option</td>
-																				</tr>
-																				<tr>
-																					<td class='text-center' style='color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:16px; line-height:30px; text-align:center;'>Wealth and finance </td>
-																				</tr>
-																			</table>
-																		</td>
-																		<td class='content-spacing' width='30' style='font-size:0pt; line-height:0pt; text-align:left;'></td>
-																	</tr>
-																</table>
-															</div>
+<!--table of acorns easy-->
+															<!--<div>-->
+															<!--	<table width='100%' border='0' cellspacing='0' cellpadding='0'>-->
+															<!--		<tr>-->
+															<!--			<td class='content-spacing' width='30' height='366' style='font-size:0pt; line-height:0pt; text-align:left;'></td>-->
+															<!--			<td style='padding: 30px 0px;'>-->
+															<!--				<table width='100%' border='0' cellspacing='0' cellpadding='0'>-->
+															<!--					<tr>-->
+															<!--						<td class='h1 center pb25' style='color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:40px; line-height:46px; text-align:center; padding-bottom:25px;'>Acorns Invest</td>-->
+															<!--					</tr>-->
+															<!--					<tr>-->
+															<!--						<td class='text-center' style='color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:16px; line-height:30px; text-align:center;'>Wealth and finance <br> <i>its Acorns Easy</i></td>-->
+															<!--					</tr>-->
+															<!--				</table>-->
+															<!--			</td>-->
+															<!--			<td class='content-spacing' width='30' style='font-size:0pt; line-height:0pt; text-align:left;'></td>-->
+															<!--		</tr>-->
+															<!--	</table>-->
+															<!--</div>-->
+															
+															<!--end table here-->
 
 
 														</td>
 													</tr>
 													<tr>
-														<td class='mp15' style='padding: 20px 30px;' bgcolor='#000014' align='center'>
+														<td class='mp15' style='padding: 20px 30px;' bgcolor='#74c947' align='center'>
 															<table border='0' cellspacing='0' cellpadding='0'>
 																<tr>
 																	<th class='column' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;'>
@@ -119,17 +122,17 @@
 														<td class='p30-15' style='padding: 50px 30px;'>
 															<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 																<tr>
-																	<td class='h3 pb20' style='color:#114490; font-family:Noto Sans, Arial,sans-serif; font-size:24px; line-height:32px; text-align:left; padding-bottom:20px;'>{{!! $emaildata['email_header'] !!}}</td>
+																	<td class='h3 pb20' style='color:#74c947; font-family:Noto Sans, Arial,sans-serif; font-size:24px; line-height:32px; text-align:left; padding-bottom:20px;'>{!! $emaildata['email_header'] !!}</td>
 																</tr>
 																<tr>
-																	<td class='text pb20' style='color:#777777; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:26px; text-align:left; padding-bottom:20px;'>Sir <br>{{!! $emaildata['email_body'] !!}}</td>
+																	<td class='text pb20' style='color:#364150; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:26px; text-align:left; padding-bottom:20px;'> <br>{!! $emaildata['email_body'] !!}</td>
 																</tr>
 
 																<tr>
 																	<td align='left'>
 																		<table border='0' cellspacing='0' cellpadding='0'>
 																			<tr>
-																				<td class='text-button' style='background:#114490; color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:18px; padding:12px 20px; text-align:center; border-radius:6px;'><a href='https://auxilliarytradex.com/about' target='_blank' class='link-white' style='color:#ffffff; text-decoration:none;'><span class='link-white' style='color:#ffffff; text-decoration:none;'>FIND OUT MORE ABOUT US</span></a></td>
+																				<td class='text-button' style='background:#74c947; color:#ffffff; font-family:Noto Sans, Arial,sans-serif; font-size:14px; line-height:18px; padding:12px 20px; text-align:center; border-radius:6px;'><a href='https://acorninvestments.in/' target='_blank' class='link-white' style='color:#ffffff; text-decoration:none;'><span class='link-white' style='color:#ffffff; text-decoration:none;'>Visit Our website</span></a></td>
 																			</tr>
 																		</table>
 																	</td>
@@ -143,31 +146,31 @@
 										</tr>
 									</table>
 
-									<table width='100%' border='0' cellspacing='0' cellpadding='0'>
-										<tr>
-											<td style='padding-bottom: 20px;'>
-												<table width='100%' border='0' cellspacing='0' cellpadding='0'>
-													<tr>
-														<th class='column-top' width='275' bgcolor='#ffffff' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>
-															<table width='100%' border='0' cellspacing='0' cellpadding='0'>
-																<tr>
-																	<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='https://auxilliarytradex.com/images/emailimages/image3.png' width='275' height='207' border='0' alt='' /></td>
-																</tr>
-															</table>
-														</th>
-														<th class='column-empty2' width='20' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'></th>
-														<th class='column-top' width='275' bgcolor='#ffffff' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>
-															<table width='100%' border='0' cellspacing='0' cellpadding='0'>
-																<tr>
-																	<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='https://auxilliarytradex.com/images/emailimages/image4.png' width='275' height='207' border='0' alt='' /></td>
-																</tr>
-															</table>
-														</th>
-													</tr>
-												</table>
-											</td>
-										</tr>
-									</table>
+									<!--<table width='100%' border='0' cellspacing='0' cellpadding='0'>-->
+									<!--	<tr>-->
+									<!--		<td style='padding-bottom: 20px;'>-->
+									<!--			<table width='100%' border='0' cellspacing='0' cellpadding='0'>-->
+									<!--				<tr>-->
+									<!--					<th class='column-top' width='275' bgcolor='#ffffff' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>-->
+									<!--						<table width='100%' border='0' cellspacing='0' cellpadding='0'>-->
+									<!--							<tr>-->
+									<!--								<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='https://auxilliarytradex.com/images/emailimages/image3.png' width='275' height='207' border='0' alt='' /></td>-->
+									<!--							</tr>-->
+									<!--						</table>-->
+									<!--					</th>-->
+									<!--					<th class='column-empty2' width='20' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'></th>-->
+									<!--					<th class='column-top' width='275' bgcolor='#ffffff' style='font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;'>-->
+									<!--						<table width='100%' border='0' cellspacing='0' cellpadding='0'>-->
+									<!--							<tr>-->
+									<!--								<td class='fluid-img p20' style='font-size:0pt; line-height:0pt; text-align:left; padding:20px;'><img src='https://auxilliarytradex.com/images/emailimages/image4.png' width='275' height='207' border='0' alt='' /></td>-->
+									<!--							</tr>-->
+									<!--						</table>-->
+									<!--					</th>-->
+									<!--				</tr>-->
+									<!--			</table>-->
+									<!--		</td>-->
+									<!--	</tr>-->
+									<!--</table>-->
 									<table width='100%' border='0' cellspacing='0' cellpadding='0'>
 										<tr>
 											<td class='p30-15' style='padding: 50px 30px;' bgcolor='#ffffff'>
@@ -178,7 +181,7 @@
 														</td>
 													</tr>
 													<tr>
-														<td class='text-footer1 pb10' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;'>Auxilliary Tradex - Recommended by Google</td>
+														<td class='text-footer1 pb10' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;'>Acorns Invest - Recommended by Google</td>
 													</tr>
 													<tr>
 														<td class='text-footer2 pb30' style='color:#999999; font-family:Noto Sans, Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;'>United Kingdom</td>

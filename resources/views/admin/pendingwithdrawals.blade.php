@@ -91,10 +91,10 @@
                                     <td>
                                         <div class="table-data-feature">
 
-                                            <a href="{{route('markwithdrawalpaid', $pendingwithdrawal->id )}}"><button class="item" data-toggle="tooltip" data-placement="top" title="mark as paid">
+                                            <a href="{{route('markwithdrawalpaid', $pendingwithdrawal->wid )}}"><button class="item" data-toggle="tooltip" data-placement="top" title="mark as paid">
                                                 <i class="zmdi zmdi-edit"></i>
                                             </button></a>
-                                            <a href="{{route('deletewithdrawal',$pendingwithdrawal->id )}}">
+                                            <a href="{{route('deletewithdrawal',$pendingwithdrawal->wid )}}">
                                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
                                                 <i class="zmdi zmdi-delete"></i>
                                             </button></a>

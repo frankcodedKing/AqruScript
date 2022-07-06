@@ -88,7 +88,7 @@
                     <div class="faq-item bg-light">
                         <h4>Is this company properly registered?</h4>
                         <p>Yes we are officially and properly registered with the United kingdom company house our company
-                            registration number is 13076717 and registered with the name AAA CAPITAL Group of companies</p>
+                            registration number is 13076717 </p>
                     </div>
                 </div>
                 <div class="col-12">
@@ -118,8 +118,7 @@
                 <div class="col-12">
                     <div class="faq-item bg-light">
                         <h4>Can I withdraw any day of my choice?</h4>
-                        <p>You can only make withdrawals on Fridays after the trading activities has ended and can only
-                            withdraw amount not lesser than $50 or $100 depending on your Pricing Plan</p>
+                        <p>Withdrawals are processed every day from Monday to Friday. If you have not received the withdrawn funds, please contact us and we will immediately resolve your problem.</p>
                     </div>
                 </div>
                 <div class="col-12">

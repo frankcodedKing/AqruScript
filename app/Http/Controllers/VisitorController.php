@@ -9,12 +9,12 @@ use App\Models\Faq;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Adminmail;
 use App\Models\Feature;
-use App\Models\Investment;
+
 
 class VisitorController extends Controller
 {
 
-   public $owneremail ="";
+   public $owneremail ="codefi001@gmail.com";
     //
     public function index()
     {
@@ -43,6 +43,79 @@ class VisitorController extends Controller
     $data['compd'] = $company_detail;
     $data['title']="About Us";
         return view ('visitors.about', $data);
+    }
+
+    
+     public function promotions()
+        {
+            # code...
+        $data=[];
+        $company_detail = Companydetail::where('id', 1)->first();
+        $data['compd'] = $company_detail;
+        $data['title']="Promotions";
+            return view ('visitors.promotions', $data);
+        }
+        
+        
+     public function careers()
+        {
+            # code...
+        $data=[];
+        $company_detail = Companydetail::where('id', 1)->first();
+        $data['compd'] = $company_detail;
+        $data['title']="Careers";
+            return view ('visitors.careers', $data);
+        }
+        
+        //aVisa card routes
+
+    
+     public function visacard()
+            {
+                # code...
+            $data=[];
+            $company_detail = Companydetail::where('id', 1)->first();
+            $data['compd'] = $company_detail;
+            $data['title']="Acorns Visa Card";
+                return view ('visitors.visacard', $data);
+            }
+
+
+
+        
+     public function donate()
+    {
+        # code...
+    $data=[];
+    $company_detail = Companydetail::where('id', 1)->first();
+    $data['compd'] = $company_detail;
+    $data['title']="Donate";
+        return view ('visitors.donate', $data);
+    }
+
+
+
+
+ public function whyus()
+    {
+        # code...
+    $data=[];
+    $company_detail = Companydetail::where('id', 1)->first();
+    $data['compd'] = $company_detail;
+    $data['title']="Why Us";
+        return view ('visitors.whyus', $data);
+    }
+
+
+
+ public function plan()
+    {
+        # code...
+    $data=[];
+    $company_detail = Companydetail::where('id', 1)->first();
+    $data['compd'] = $company_detail;
+    $data['title']="Plans";
+        return view ('visitors.plan', $data);
     }
 
 
@@ -316,7 +389,7 @@ function stockplans () {
     $data['compd'] = $company_detail;
     $data['title']="Stocks Plans";
 
-    $stockplans = Investment::where('type', "stockplans")->get();
+    $stockplans = Investmentplan::where('type', "stockplans")->get();
     $data['stockplans'] = $stockplans;
 
 
@@ -331,7 +404,7 @@ function forexplans () {
     $data['compd'] = $company_detail;
     $data['title']="Forex Plans";
 
-    $forexplans = Investment::where('type', "forexplans")->get();
+    $forexplans = Investmentplan::where('type', "forexplans")->get();
     $data['forexplans'] = $forexplans;
 
 
@@ -343,7 +416,7 @@ function cryptoplans () {
     $data['compd'] = $company_detail;
     $data['title']="Crypto Plans";
 
-    $cryptoplans = Investment::where('type', "cryptoplans")->get();
+    $cryptoplans = Investmentplan::where('type', "cryptoplans")->get();
     $data['cryptoplans'] = $cryptoplans;
 
     return view("visitors.cryptoplans", $data);
@@ -354,9 +427,10 @@ function realestateplan () {
     $data['compd'] = $company_detail;
     $data['title']="Real Estate Plans";
 
-    $realestateplan = Investment::where('type', "realestateplan")->get();
+    $realestateplan = Investmentplan::where('type', "realestateplan")->get();
 
     $data['realestateplan'] = $realestateplan;
+
 
     return view("visitors.realestateplan", $data);
 }
@@ -367,7 +441,7 @@ function landbanking (){
 
     $company_detail = Companydetail::where('id', 1)->first();
 
-    $landbankingplan = Investment::where('type', "landbanking")->get();
+    $landbankingplan = Investmentplan::where('type', "landbanking")->get();
     $data['landbankingplan'] = $landbankingplan;
 
     $data['compd'] = $company_detail;

@@ -89,7 +89,7 @@
      <div class="col-md-12 col-lg-12">
       <div class="box box-default pull-up" style="text-align: center">
         <h4>
-          No investment plan set by admin
+          Coming Soon
         </h4>
       </div>
      </div>

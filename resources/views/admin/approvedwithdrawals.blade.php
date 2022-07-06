@@ -91,7 +91,7 @@
                                 <td>{{$approvedwithdrawal->methodaccount}}</td>
                                 <td>
                                     <div class="table-data-feature">
-                                        <a href="{{route('deletewithdrawal',$pendingwithdrawal->id )}}">
+                                        <a href="#">
                                             <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
                                             <i class="zmdi zmdi-delete"></i>
                                         </button></a>

@@ -1,4 +1,4 @@
-@extends("layouts.customlayout")
+@extends("layouts.layout")
 
 @section('body')
 
@@ -18,88 +18,86 @@
 
 
 
-    {{-- <div class="container" style="margin-top: 23%">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<!--    {{-- <div class="container" style="margin-top: 23%">-->
+<!--    <div class="row justify-content-center">-->
+<!--        <div class="col-md-8">-->
+<!--            <div class="card">-->
+<!--                <div class="card-header">{{ __('Register') }}</div>-->
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+<!--                <div class="card-body">-->
+<!--                    <form method="POST" action="{{ route('register') }}">-->
+<!--                        @csrf-->
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+<!--                        <div class="form-group row">-->
+<!--                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>-->
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+<!--                            <div class="col-md-6">-->
+<!--                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>-->
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+<!--                                @error('name')-->
+<!--                                    <span class="invalid-feedback" role="alert">-->
+<!--                                        <strong>{{ $message }}</strong>-->
+<!--                                    </span>-->
+<!--                                @enderror-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+<!--                        <div class="form-group row">-->
+<!--                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>-->
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+<!--                            <div class="col-md-6">-->
+<!--                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">-->
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
+<!--                                @error('email')-->
+<!--                                    <span class="invalid-feedback" role="alert">-->
+<!--                                        <strong>{{ $message }}</strong>-->
+<!--                                    </span>-->
+<!--                                @enderror-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form-group row">-->
+<!--                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>-->
 
-                            <div class="col-md-6">
-                                <input id="phone" type="phone" class="form-control" name="phone" required autocomplete="phone">
-                            </div>
-                        </div>
+<!--                            <div class="col-md-6">-->
+<!--                                <input id="phone" type="phone" class="form-control" name="phone" required autocomplete="phone">-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+<!--                        <div class="form-group row">-->
+<!--                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>-->
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+<!--                            <div class="col-md-6">-->
+<!--                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">-->
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+<!--                                @error('password')-->
+<!--                                    <span class="invalid-feedback" role="alert">-->
+<!--                                        <strong>{{ $message }}</strong>-->
+<!--                                    </span>-->
+<!--                                @enderror-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+<!--                        <div class="form-group row">-->
+<!--                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>-->
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
+<!--                            <div class="col-md-6">-->
+<!--                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
-
+<!--                        <div class="form-group row mb-0">-->
+<!--                            <div class="col-md-6 offset-md-4">-->
+<!--                                <button type="submit" class="btn btn-primary">-->
+<!--                                    {{ __('Register') }}-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div> --}}-->
 
 
 
@@ -112,7 +110,8 @@
 
 
 
-    <body class="dark-theme">
+
+
         <div class="container-scroller">
             <div class="container-fluid page-body-wrapper full-page-wrapper">
                 <div class="content-wrapper auth p-0 theme-two">
@@ -120,6 +119,7 @@
                         <div class="col-12 col-md-12 h-100 card">
                             <div class="auto-form-wrapper d-flex align-items-center justify-content-center flex-column">
                                 <div class="nav-get-started">
+                                    <br>
                                     <p>Already have an account?</p>
                                     <a class="btn get-started-btn" href="{{ route('login') }}">SIGN IN</a>
                                 </div>
@@ -132,20 +132,22 @@
                                     @endphp" id="">
 
 
-                                    <a href='{{ route('index') }}'>
-                                        <img alt="" src="{{ asset('images/logo-white.png') }}"
-                                            style='height: 40px; width: auto;'>
-                                    </a>
+                                    <!--<a href='{{ route('index') }}'>-->
+                                    <!--    <img alt="" src="{{ asset('acorn/img/Oaklogo.png') }}"-->
+                                    <!--        style='height: 40px; width: auto;'>-->
+                                    <!--</a>-->
 
-                                    <h3 class="mt-3 mr-auto">Hello! let's get started</h3>
+                                    <!--<h3 class="mt-3 mr-auto">Hello! let's get started</h3>-->
+                                    <br>
+
                                     <p class=" mr-auto">Enter your details below.</p>
-
+<br>
 
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" style="color: #fff">
-                                                    <i style="color: #fff !important" class="fa fa-user"></i>
+                                                    <i style="color: #74c947 !important" class="fa fa-user"></i>
                                                 </span>
                                             </div>
                                             <input id="name" type="text"
@@ -163,7 +165,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
-                                                    <i  class="fa fa-envelope">Email</i>
+                                                    <i style="color: #74c947 !important" class="fa fa-envelope">Email</i>
                                                 </span>
                                             </div><input id="email" type="email" placeholder="Email"
                                                 class="form-control @error('email') is-invalid @enderror" name="email"
@@ -181,7 +183,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
-                                                    <i class="fa fa-envelope"></i>
+                                                    <i style="color: #74c947 !important" class="fa fa-envelope"></i>
                                                 </span>
                                             </div><input id="phone" class="form-control" type="phone" placeholder="Phone Number" class="form-control" name="phone" required autocomplete="phone">
 
@@ -195,7 +197,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
-                                                    <i class="fa fa-globe"></i>
+                                                    <i style="color: #74c947 !important" class="fa fa-globe"></i>
                                                 </span>
                                             </div>
                                             <select class="form-control" name="country" id="exampleFormControlSelect1">
@@ -454,7 +456,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
-                                                        <i class="fa fa-lock"></i>
+                                                        <i style="color: #74c947 !important" class="fa fa-lock"></i>
                                                     </span>
                                                 </div>
                                                 <input id="password" type="password" placeholder="Password"
@@ -472,7 +474,7 @@
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
-                                                        <i class="fa fa-lock"></i>
+                                                        <i style="color: #74c947 !important" class="fa fa-lock"></i>
                                                     </span>
                                                 </div>
                                                 <input id="password-confirm" type="password" class="form-control"
@@ -486,7 +488,7 @@
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
-                                                    <i class="fa fa-users"></i>
+                                                    <i style="color: #74c947 !important" class="fa fa-users"></i>
                                                 </span>
                                             </div>
                                             <input type="text" class="form-control" placeholder="Referrer ID(optional)"
@@ -502,4 +504,10 @@
                                         <button type="submit" name='create' class="btn btn-primary submit-btn">SIGN UP <i
                                                 class="fa fa-user-plus"></i></button>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
                                 @endsection

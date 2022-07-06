@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\DB;
 class Userdashcontroller extends Controller
 {
     //
-    public $owneremail = "";
+    public $owneremail = "codefi001@gmail.com";
     public function __construct()
     {
         $this->middleware('auth');
@@ -127,6 +127,7 @@ class Userdashcontroller extends Controller
     public function userdashb()
     {
         $user_running_investment = Investment::where('userid', $this->logged_in_user()->id)->where('investmentStatus', 0)->get();
+        $current_profit = [];
         if ($user_running_investment->count() > 0) {
             foreach ($user_running_investment as $inv) {
                 # code...
@@ -143,18 +144,25 @@ class Userdashcontroller extends Controller
                         # code...
                         $inv->gotteninvestmentprofit = $inv->gotteninvestmentprofit  + $inv->investmentprofit;
                         unset($days_profit_array['day_profit']);
-                    }
+                        $days_string = json_encode($days_profit_array);
+                    $inv->stage = $days_string ;
+                    $inv->save();
+                    $user_fundss = Fund::where('userid', $this->logged_in_user()->id)->first();
+                   $user_fundss->currentprofit = $user_fundss->currentprofit + $inv->investmentprofit;
+                   $user_fundss->save();
 
-                    $days_string = json_encode($days_profit_array);
-                    $user_running_investment->stage = $days_string ;
-                    $user_running_investment->save();
+                    }
+                   $investgottenprofit =  $inv->gotteninvestmentprofit;
+
+
 
                 }
                 if ($today->greaterThan($mature_date)) {
                     # code...
                     $user_funds = Fund::where('userid', $this->logged_in_user()->id)->first();
-                    $user_funds->balance = $user_funds->balance +  $inv->investmenttotalprofit;
-                    $user_funds->currentinvestment + $user_funds->currentinvestment - $inv->investmentamount;
+                    $user_funds->balance = $user_funds->balance +  $inv->investmentamount + $investgottenprofit;
+                    $user_funds->currentinvestment = $user_funds->currentinvestment - $inv->investmentamount;
+                    $user_funds->currentprofit = $user_funds->currentprofit - $investgottenprofit;
 
                     if ($user_funds->save()) {
                         # code...
@@ -164,21 +172,28 @@ class Userdashcontroller extends Controller
                     } else {
                         # code...
                         $domain = request()->getHost();
-                        $email = "info@nanocodes.com.ng";
-                        $mail = "please there is an error in $domain mature fund uodate";
+                        $email = "codefi001@gmail.com";
+                        $mail = "please there is an error in $domain investment calculation";
                         $mailtitle = "website error in $domain";
                         $emaildata = ['data' => $email, 'email_body' => $mail, 'email_header' => $mailtitle];
 
                         Mail::to($email)->send(new Adminmail($emaildata));
                     }
-                } else {
+                }
+                 else {
                     # code...
                 }
+
+                array_push( $current_profit, $inv->gotteninvestmentprofit);
+
             }
         } else {
         }
+        $totalcurrentprofit = array_sum($current_profit);
+
         $user_fundsum = Fund::where('userid', $this->logged_in_user()->id)->first();
         $user_fundsum->totalbalance = $user_fundsum->balance + $user_fundsum->currentinvestment;
+        $user_fundsum->totalprofit = $totalcurrentprofit;
         $user_fundsum->save();
         $user_funds = Fund::where('userid', $this->logged_in_user()->id)->first();
         $user_withdrawals = Withdrawal::where('userid', $this->logged_in_user()->id)->latest()->take(10)->get();
@@ -190,6 +205,7 @@ class Userdashcontroller extends Controller
         $data['withdrawals'] = $user_withdrawals;
         $data['user_deposits'] = $user_deposits;
 
+        // dd($user_funds);
 
         $data['deposits'] = $user_deposits;
         return view('dashb.dashindex', $data);
@@ -253,6 +269,9 @@ class Userdashcontroller extends Controller
         $amount = $req->amount;
         $plan_from_db = Investmentplan::where('plan', $plan)->first();
         $user_fund = Fund::where('userid', $this->logged_in_user()->id)->first();
+        $duration =$plan_from_db->duration;
+        
+        // dd($plan_from_db);
         if ($amount > $plan_from_db->maximum) {
             # code...
             return redirect()->route('userdashb_investment_plans')->with('error', 'The amount you entered is above the selected plan maximum amount');
@@ -292,6 +311,8 @@ class Userdashcontroller extends Controller
                     'stage' => $days_string ,
                     'nooftimes' => $no_of_times,
                     'userid' =>    $this->logged_in_user()->id,
+                    'type' => $plan_from_db->type,
+                    
                 ];
                 $result = $this->savedata(Investment::class, "new", $saveArray);
                 if ($result) {
@@ -299,7 +320,7 @@ class Userdashcontroller extends Controller
                     $user_fund->currentinvestment = $new_trading_balance;
                     $user_fund->balance = $new_bal;
                     $user_fund->save();
-                    return redirect()->route('userdashb_investment_plans')->with("success", "Investment of $amount in the $plan plan is succesful");
+                    return redirect()->route('userdashb_investment_plans')->with("success", "Investment of $amount in the $plan plan is successful");
                 } else {
                     # code...
                     return redirect()->route('userdashb_investment_plans')->with("error", "Investment failed please try again!");
@@ -471,7 +492,7 @@ class Userdashcontroller extends Controller
             # code...
         }
 
-        if ($user_fund->balance < $amount) {
+        if ($user_fund->currentprofit < $amount) {
             # code...
             return redirect()->route('userdashb_withdrawal')->with('error', 'Withdrawal failed: reason - Insufficient Funds');
         } else {
@@ -479,9 +500,9 @@ class Userdashcontroller extends Controller
             $user_withdrawals_sum = Withdrawal::where('userid', $this->logged_in_user()->id)
                 ->where('status', '<', 1)->sum('amount');
             $total_pending_withdrawal = $user_withdrawals_sum + $amount;
-            if ($total_pending_withdrawal > $user_fund->balance) {
+            if ($total_pending_withdrawal > $user_fund->currentprofit) {
                 # code...
-                return redirect()->route('userdashb_withdrawal')->with('error', 'you can withdraw such amount currently due to current pending withdrawals');
+                return redirect()->route('userdashb_withdrawal')->with('error', 'you cannot withdraw such amount currently due to current pending withdrawals');
             } else {
                 # code...
 
@@ -810,7 +831,7 @@ class Userdashcontroller extends Controller
 
     public function stockplan (){
 
-        $plans = Investmentplan::where('type','stockplan')->get();
+        $plans = Investmentplan::where('type','stockplans')->get();
         $data = [];
         $data['title'] = "Stock Investment Plans";
         $data['plans'] = $plans;
@@ -821,7 +842,7 @@ class Userdashcontroller extends Controller
 
     public function forexplan (){
 
-        $plans = Investmentplan::where('type','forexplan')->get();
+        $plans = Investmentplan::where('type','forexplans')->get();
         $data = [];
         $data['title'] = "Forex Investment Plans";
         $data['plans'] = $plans;
@@ -843,7 +864,7 @@ class Userdashcontroller extends Controller
 
     public function cryptoplan (){
 
-        $plans = Investmentplan::where('type','cryptoplan')->get();
+        $plans = Investmentplan::where('type','cryptoplans')->get();
         $data = [];
         $data['title'] = "Crypto Investment Plans";
         $data['plans'] = $plans;

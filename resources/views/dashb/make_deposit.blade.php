@@ -28,7 +28,7 @@
               </div>
 
               <div class="col-lg-6 col-12">
-                  <div class="box bg-info box-solid">
+                  <div class="box bg-success box-solid">
                     <div class="box-header with-border">
                       <h4 class="box-title">make deposit</h4>
                       <ul class="box-controls pull-right">
@@ -48,7 +48,9 @@
                                   <select required name="method" id="" class="form-control">
                                       <option value="btc_address">BTC</option>
                                       <option value="eth">Eth</option>
-                                      <option value="paypal">Paypal</option>
+                                      <!--<option value="paypal">Paypal</option>-->
+                                      <option value="usdt">USDT</option>
+                                      <option value="xrp">XRP</option>
                                   </select>
 
                               </div>

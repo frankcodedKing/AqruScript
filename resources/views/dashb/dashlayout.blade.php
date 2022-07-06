@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://crypto-admin-templates.multipurposethemes.com/crypto-dark-admin/images/favicon.ico">
+    <link rel="icon" href="https://sqy7rm.media.zestyio.com/logo-green.svg">
 
     <title>User - {{$title}}</title>
 
@@ -28,6 +28,9 @@
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<!--<script src="//code-eu1.jivosite.com/widget/mymXg53yvA" async></script>-->
+	
+	<script src="//code.tidio.co/tpac1y4t3n45aiih3j5hdgc0aq76tbwd.js" async></script>
 
 </head>
 <body class="hold-transition skin-yellow sidebar-mini">
@@ -42,13 +45,13 @@
     <a href="{{route('userdashb')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
-		  <span class="light-logo"><img src="dashb/images/logo-light.png" alt="logo"></span>
-		  <span class="dark-logo"><img src="dashb/images/logo-dark.png" alt="logo"></span>
+		  <span class="light-logo"><img src="https://acorninvestments.in/acorn/img/Oaklogo.png" width="50%" alt="logo"></span>
+		  <span class="dark-logo"><img src="https://acorninvestments.in/acorn/img/Oaklogo.png" width="50%" alt="logo"></span>
 	  </b>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-		  <img src="dashb/images/logo-light-text.png" alt="logo" class="light-logo">
-	  	  <img src="dashb/images/logo-dark-text.png" alt="logo" class="dark-logo">
+		  <img src="dashb/images/https://acorninvestments.in/acorn/img/Oaklogo.png" alt="logo" width="30%" class="light-logo">
+	  	  <img src="https://acorninvestments.in/acorn/img/Oaklogo.png" alt="logo" width="30%" class="dark-logo">
 	  </span>
     </a>
     <!-- Header Navbar -->
@@ -174,12 +177,12 @@
 		 <div class="ulogo">
 			 <a href="index.html">
 			  <!-- logo for regular state and mobile devices -->
-			  <span><b>User </b></span>
+			  <span><b>Hi, <i>{{Auth::user()->name}}</i>  </b></span>
 			</a>
 		</div>
         <div class="image">
           <img src="@if (Auth::user()->profilepic != "")
-          storage/profile/{{Auth::user()->profilepic}}
+          {{ '/storage/profile/'.Auth::user()->profilepic}}
           @else
           dashb/images/user2-160x160.jpg
           @endif " class="rounded-circle" alt="User Image">
@@ -297,7 +300,7 @@
             <li><a href="{{route('userdashb_profile')}}">view profile</a></li>
             <li><a href="{{route('userdashb_wallet_address')}}">my wallet address</a></li>
             <li><a href="{{route('userdashb_message')}}">my messages</a></li>
-            <li><a href="{{route('userdashb_notification')}}">my notifications</a></li>
+            <!--<li><a href="{{route('userdashb_notification')}}">my notifications</a></li>-->
           </ul>
         </li>
 
@@ -344,10 +347,10 @@
               <i class="fa fa-angle-right pull-right"></i>
             </span>
               </a>
-              <ul class="treeview-menu">
-                <li><a href="../samplepage/login.html">google authentication</a></li>
+              <!--<ul class="treeview-menu">-->
+              <!--  <li><a href="../samplepage/login.html">google authentication</a></li>-->
 
-              </ul>
+              <!--</ul>-->
             </li>
 
           </ul>
@@ -373,17 +376,17 @@
 
 
   <footer class="main-footer">
-    <div class="pull-right d-none d-sm-inline-block">
-        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-		  <li class="nav-item">
-			<a class="nav-link" href="javascript:void(0)">FAQ</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Purchase Now</a>
-		  </li>
-		</ul>
-    </div>
-	  &copy; 2018 <a href="#">designed by Multi-Purpose Themes</a>. All Rights Reserved.
+  <!--  <div class="pull-right d-none d-sm-inline-block">-->
+  <!--      <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">-->
+		<!--  <li class="nav-item">-->
+		<!--	<a class="nav-link" href="javascript:void(0)">FAQ</a>-->
+		<!--  </li>-->
+		<!--  <li class="nav-item">-->
+		<!--	<a class="nav-link" href="#">Purchase Now</a>-->
+		<!--  </li>-->
+		<!--</ul>-->
+  <!--  </div>-->
+	  &copy; 2018 <a href="#">Acorns Invest</a>. All Rights Reserved.
   </footer>
   <!-- Control Sidebar -->
 
@@ -432,18 +435,6 @@
 		});
       </script>
 
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/60434f891c1c2a130d6597dc/1f03etdd9';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+
 </body>
 </html>

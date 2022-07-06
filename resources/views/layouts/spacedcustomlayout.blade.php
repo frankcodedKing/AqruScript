@@ -9,7 +9,7 @@
 	<meta name="author" content="">
         <meta name="theme-color" content="#fff">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
+	<meta name="description" content="Auxilliary Tradex - Top investment company for Stocks, Crypto Currency, Real estate and Forex. we help simplify and enhance the experience of investing in cryptocurrencies, enable users to enter the Crypto market, Forex market, Stock market and Real Estate with zero learning curve required, and we help construct diversified portfolios with the aim to maximize returns while maintaining your preferred risk profile.">
 	<!-- Fav Icon  -->
 	<link rel="shortcut icon" href="images/logo-icon-b.png">
 	<!-- Site Title  -->
@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="assets/css/vendor.bundle7f4a7f4a.css?ver=141">
 	<link id="color-sheet" rel="stylesheet" href="assets/css/style7f4a7f4a.css?ver=141">
 	<link rel="stylesheet" href="assets/css/theme7f4a7f4a.css?ver=141">
-
+<meta name="google-site-verification" content="O2oGVMrls7YB6aZecCgMUCcaJ8nrRz0jyA4tMDuKL5E" />
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,6 +28,7 @@
 		ga('create', 'UA-91615293-2', 'auto');
 		ga('send', 'pageview');
 	</script>
+	<script src="//code-eu1.jivosite.com/widget/mymXg53yvA" async></script>
 
         <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'><link rel="stylesheet" href="style.html">
@@ -470,21 +471,9 @@ body {
     </div>
 </div>
 </div>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6128bb52d6e7610a49b2480b/1fe3hnf57';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
-<a href="https://wa.me/447888878150" class='watkey' ><img src="images/icons/whatsapp.png" alt="" style='width: 50px;'></a>
+
+<a href="https://wa.me/{{$compd? $compd->companyPhone : "coming soon"}}" class='watkey' ><img src="images/icons/whatsapp.png" alt="" style='width: 50px;'></a>
 
 <!-- preloader -->
 <div class="preloader preloader-light preloader-alaska-light no-split">
@@ -525,6 +514,13 @@ document.querySelector(x).click();
 
 </script>
 
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
 
 <script>
 //Get the button

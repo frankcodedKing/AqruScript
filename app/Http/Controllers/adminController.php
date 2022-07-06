@@ -26,7 +26,7 @@ class adminController extends Controller
 {
 
 
-  public  $website = "websiteurl";
+  public  $website = "codefi001@gmail.com";
 
     public function __construct()
     {
@@ -244,7 +244,7 @@ class adminController extends Controller
 
     public function pendingwithdrawals()
     {
-        $pednindWithdrawal = Withdrawal::where("status", 0)->join('users', 'users.id', '=', 'withdrawals.userid')->get();
+        $pednindWithdrawal = Withdrawal::where("status", 0)->join('users', 'users.id', '=', 'withdrawals.userid')->select('users.name', 'users.email', 'withdrawals.id as wid', 'withdrawals.amount', 'users.id')->get();
         $data = ["pendingwithdrawals" => $pednindWithdrawal];
         return view("admin.pendingwithdrawals", $data);
     }
@@ -293,7 +293,10 @@ $userdetail = User::where('id',$userwithdrawal->userid)->first();
 
     public function runninginvestments()
     {
-        return view("admin.runninginvestments");
+
+        $runninginvestments = Investment::where("investmentStatus", 0)->get();
+        $data = ["runninginvestments" => $runninginvestments];
+        return view("admin.runninginvestments",$data );
     }
 
 
@@ -927,6 +930,8 @@ $userdetail = User::where('id',$userwithdrawal->userid)->first();
             $payments->btc_address = $request->btc_address;
             $payments->paypal = $request->paypal;
             $payments->eth = $request->eth;
+            $payments->usdt = $request->usdt;
+            $payments->xrp = $request->xrp;
             if ($payments->save()) {
                 # code...
                 return redirect()->route('payments_settings')->with('success', 'payments settings updated succesfuly');
@@ -940,6 +945,8 @@ $userdetail = User::where('id',$userwithdrawal->userid)->first();
             $payments->btc_address = $request->btc_address;
             $payments->paypal = $request->paypal;
             $payments->eth = $request->eth;
+            $payments->usdt = $request->usdt;
+            $payments->xrp = $request->xrp;
             if ($payments->save()) {
                 # code...
                 return redirect()->route('payments_settings')->with('success', 'payments settings updated succesfuly');
@@ -1122,8 +1129,11 @@ $userdetail = User::where('id',$userwithdrawal->userid)->first();
 
 
 
-    public function setfeturea () {
-        return view('admin.setfeatures');
+    public function setfeatures () {
+        $company_features = Feature::where('id', 1)->first();
+        $data=[];
+        $data['feature'] = $company_features;
+        return view('admin.setfeatures',$data);
     }
 
 

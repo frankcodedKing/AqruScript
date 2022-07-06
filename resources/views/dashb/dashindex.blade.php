@@ -108,7 +108,8 @@
 					  </div>
 					  <div class=" align-items-center mt-5">
 						<div class="fun">
-						  <p class="font-weight-600"><span class="text-success">${{$funds? $funds->totalprofit : 0.01}}</span></p>
+						  <p class="font-weight-600"><span class="text-success">${{$funds? $funds->currentprofit : 0.01}}</span></p>
+						   <!--<p class="font-weight-600"><span class="text-success">$17</span></p>-->
 						</div>
 					  </div>
 				</div>
@@ -156,7 +157,7 @@
                             @endforeach
                             @else
                             <tr>
-                                <td colspan="2"><a href="{{route('userdashb_deposit')}}" class="text-yellow hover-warning">You have no succeful deposit click here to make a deposit</a></td>
+                                <td colspan="2"><a href="{{route('userdashb_deposit')}}" class="text-yellow hover-warning">You have no successful deposits click here to make a deposit</a></td>
                               </tr>
                             @endif
 
@@ -206,7 +207,7 @@
                             @endforeach
                             @else
                             <tr>
-                                <td colspan="2"><a href="{{route('userdashb_withdrawal')}}" class="text-yellow hover-warning">You have not made any succesful withdrawal</a></td>
+                                <td colspan="2"><a href="{{route('userdashb_withdrawal')}}" class="text-yellow hover-warning">You have not made any successful withdrawal</a></td>
                               </tr>
                             @endif
 						</tbody>

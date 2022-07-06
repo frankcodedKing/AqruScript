@@ -1,44 +1,15 @@
-@extends("layouts.spacedcustomlayout")
+@extends("layouts.layout")
 
 @section("body")
-
-
-
-<div class="banner banner-inner banner-s2 banner-s2-inner tc-light">
-    <div class="banner-block">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7 col-sm-9">
-                    <div class="banner-content">
-                        <div class="line-animate">
-                            <span class="line line-top"></span>
-                            <span class="line line-right"></span>
-                            <span class="line line-bottom"></span>
-                            <span class="line line-left"></span>
-                        </div>
-                        <p class="sub-heading">Contact support</p>
-                        <h1 class="banner-heading">Send us a message</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bg-image">
-            <img src="images/bg-a.jpg" alt="banner">
-        </div>
-    </div>
-</div>
-
-
-</header>
-<!-- START SECTION BANNER -->
 
 <div class="section section-x">
     <div class="container">
         <div class="row gutter-vr-30px">
             <div class="col-lg-4">
+                
                 <div class="text-block">
                     <div class="section-head">
-                        <h5 class="heading-xs dash fw-4">Send us a message</h5>
+                        <!--<h5 class="heading-xs dash fw-4">Send us a message</h5>--><br>
                         <h2>Tell us how we may help you and leave us your contact info</h2>
                     </div>
                 </div>
@@ -49,94 +20,95 @@
                     <div class="form-results"></div>
                     <div class="row">
                         <div class="form-field col-md-6">
-                            <input name="name" required type="text" placeholder="Your Name" class="input bg-secondary">
+                            <input name="name" required type="text" placeholder="Your Name" class="input bg-white">
                         </div>
                         <div class="form-field col-md-6">
-                            <input name="email" required type="email" placeholder="Your Email" class="input bg-secondary">
+                            <input name="email" required type="email" placeholder="Your Email" class="input bg-white">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-field col-md-6">
-                                                            <input name="phone" type="tel" placeholder="Your Phone" class="input bg-secondary">
+                                                            <input name="phone" type="tel" placeholder="Your Phone" class="input bg-white">
                         </div>
                         <div class="form-field col-md-6">
-                            <input name="subject" type="text" placeholder="Subject" class="input bg-secondary">
+                            <input name="subject" type="text" placeholder="Subject" class="input bg-white">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-field col-md-12">
-                            <textarea name="message" required placeholder="Briefly tell us what you want... " class="input input-msg bg-secondary" aria-required="true"></textarea>
+                            <textarea name="message" required placeholder="Briefly tell us what you want... " class="input input-msg bg-white" aria-required="true"></textarea>
+                            <br><br>
                             <button type="submit" class="btn btn-md" name="send">Send Message</button>
                         </div>
                     </div>
-                </form><!-- end form -->
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- .container -->
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- .section -->
 
 <!-- section  -->
-        <div class="section tc-light section-x" style="padding-bottom: 30px;">
-    <div class="container">
-        <div class="row gutter-vr-30px">
-            <div class="col-md-12">
-                <div class="contact-text">
-                    <div class="text-box">
-                        <h3>Visit Us</h3>
-                        <p class="lead"><em class="contact-icon ti-direction"></em> 17 Grosvenor Street, London, England, W1K 4QG UK</p>
-                    </div>
-                    <ul class="contact-list">
-                        <li>
-                            <em class="contact-icon ti-mobile"></em>
-                            <div class="conatct-content">
-                                <a href="tel:+44-7888-878150">+44-7888-878150</a>
-                            </div>
-                        </li>
-                        <li>
-                            <em class="contact-icon ti-email"></em>
-                            <div class="conatct-content">
-                                <a href="mailto:{{$compd? $compd->companyEmail : "coming soon"}}">{{$compd? $compd->companyEmail : "coming soon"}}</a>
-                            </div>
-                        </li>
-                                                        <li>
-                            <em class="contact-icon ti-world"></em>
-                            <div class="conatct-content">
-                                                                    <a href="{{route('index')}}">www.auxilliarytradex.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div><!-- .col -->
-        </div><!-- .row -->
-    </div><!-- .container -->
+<!--        <div class="section tc-light section-x" style="padding-bottom: 30px;">-->
+<!--    <div class="container">-->
+<!--        <div class="row gutter-vr-30px">
+<!--            <div class="col-md-12">-->
+<!--                <div class="contact-text">
+<!--                    <div class="text-box">
+<!--                        <h3>Visit Us</h3>
+<!--                        <p class="lead"><em class="contact-icon ti-direction"></em> 17 Grosvenor Street, London, England, W1K 4QG UK</p>
+<!--                    </div>-->
+<!--                    <ul class="contact-list">-->
+<!--                        <li>-->
+<!--                            <em class="contact-icon ti-mobile"></em>-->
+<!--                            <div class="conatct-content">-->
+<!--                                <a href="tel:+44-7888-878150">+44-7888-878150</a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <em class="contact-icon ti-email"></em>-->
+<!--                            <div class="conatct-content">-->
+<!--                                <a href="mailto:{{$compd? $compd->companyEmail : "coming soon"}}">{{$compd? $compd->companyEmail : "coming soon"}}</a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                                                        <li>-->
+<!--                            <em class="contact-icon ti-world"></em>-->
+<!--                            <div class="conatct-content">-->
+<!--                                                                    <a href="{{route('index')}}">www.auxilliarytradex.com</a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div><!-- .col -->
+<!--        </div><!-- .row -->
+<!--    </div><!-- .container -->
     <!-- bg -->
-    <div class="bg-image bg-fixed">
-        <img src="images/bg-l.jpg" alt="">
-    </div>
+<!--    <div class="bg-image bg-fixed">-->
+<!--        <img src="images/bg-l.jpg" alt="">-->
+<!--    </div>-->
     <!-- .bg -->
-</div>
+<!--</div>-->
 
 <!-- code -->
 
 <!-- end code -->
 <!-- section / cta-->
-<div class="section section-cta bg-primary tc-light">
-<div class="container">
-    <div class="row gutter-vr-30px align-items-center justify-content-between">
-        <div class="col-lg-8 text-center text-lg-left">
-            <div class="cta-text-s2">
-                <h2><span>Start your journey to</span> <strong> Financial freedom </strong></h2>
-            </div>
-        </div>
-        <div class="col-lg-4 text-lg-right text-center">
-            <div class="cta-btn">
-                <a href="{{route('register')}}" class="btn btn-lg">Get Started</a>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+<!--<div class="section section-cta bg-primary tc-light">-->
+<!--<div class="container">-->
+<!--    <div class="row gutter-vr-30px align-items-center justify-content-between">-->
+<!--        <div class="col-lg-8 text-center text-lg-left">-->
+<!--            <div class="cta-text-s2">-->
+<!--                <h2><span>Start your journey to</span> <strong> Financial freedom </strong></h2>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-lg-4 text-lg-right text-center">-->
+<!--            <div class="cta-btn">-->
+<!--                <a href="{{route('register')}}" class="btn btn-lg">Get Started</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
 
 
 @endsection()

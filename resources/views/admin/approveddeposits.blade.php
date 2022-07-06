@@ -74,18 +74,18 @@
                                 <td>
                                     <label class="">
 
-                                        <span class="">$loop->index</span>
+                                        <span class="">{{$loop->index}}</span>
                                     </label>
                                 </td>
-                                <td>$deposit->name</td>
+                                <td>{{$deposit->name}}</td>
                                 <td>
-                                    <span class="desc">$deposit->email</span>
+                                    <span class="desc">{{$deposit->email}}</span>
                                 </td>
 
-                                <td>$deposit->method</td>
+                                <td>{{$deposit->method}}</td>
                                 <form action="" method="">
-                                <td>$deposit->method</td>
-                                <td>$deposit->method</td>
+                                <td>{{$deposit->method}}</td>
+                                <td>{{$deposit->method}}</td>
 
                                 <td>
                                     <div class="table-data-feature">

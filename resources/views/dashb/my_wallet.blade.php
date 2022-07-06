@@ -36,7 +36,7 @@
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
-        You can send funds to your wallet address to make a deposit
+        Proceed to <a href="{{route('userdashb_deposit')}}">Deposit</a> to get wallet address for funding your account
       </div>
       <!-- /.box-footer-->
     </div>

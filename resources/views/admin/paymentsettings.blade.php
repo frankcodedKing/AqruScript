@@ -59,6 +59,8 @@
                 <th>BTC address</th>
                 <th>Paypal</th>
                 <th>ETH</th>
+                <th>USDT</th>
+                <th>XRP</th>
                 <th>CHANGE</th>
 
             </tr>
@@ -74,6 +76,9 @@
                         </td>
 
                         <td><input type="text" name="eth" id="" value="{{$payment? $payment->eth :'No eth address set'}}"></td>
+
+                        <td><input type="text" name="usdt" id="" value="{{$payment? $payment->usdt :'No usdt address set'}}"></td>
+                        <td><input type="text" name="xrp" id="" value="{{$payment? $payment->xrp :'No xrp address set'}}"></td>
 
                         <td>
                             <button type="submit" class="btn btn-primary">change</button>
